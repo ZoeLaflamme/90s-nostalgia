@@ -1,33 +1,40 @@
-body {
+html { 
     font-family: 'Roboto', sans-serif;
     color: #222;
     line-height: 1.4;
     font-size: 110%;
+    box-sizing: border-box;
+    background-color: white;
 
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
 }
 
-update css to include snippet 
 
-image { to be fixed
+img {
     width: 100%;
 }
 
-class for logo and update css { fix here
+.logo {
     width: 160px;
-    confirm display transition-property
-    center logo in middle of screen
+    display: block;
+    margin: 0 auto;
 }
 
-wrapper to elements that appear fix header
-
-.wrapper { fix here
+.wrapper {
     width: 900px;
-    center content to margin 
-    add padding top and bottom: 1.5em left right value:0;
+    margin: 0 auto;
+   text-align: center; 
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 header {
@@ -37,98 +44,100 @@ header {
     padding-left: 0;
 }
 
-nav { fix here
-   list-style-type: none; 
-   display: inline-block;
-   padding: 0%;
-   center text within link after padding
+nav ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+    text-align: center
+   
 }
 
-a:nav { fix here
-apply appropriate display to add padding
-padding-top: .5em;
-padding-bottom: .5em;
-padding-left: .75em;
-padding-right: .75em;
-border-radius: 8px;
+nav li {
+    display: inline;
 }
 
-nav link states for link and visited { fix here
-background-color: purple;
-color: white;
-border: 2px white;
-remove underline
+nav a {
+    display: inline-block;
+    padding: .5em .75em;
+    border-radius: 8px;
+
 }
 
-nav link states hover and focus {
-    background-color: white;
-    color: purple;
-    border: 2px purple;
+nav a,
+nav a:visited {
+    background-color: purple;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
 }
 
-hero { fix here
-    width: 100%;
-    padding-top: 10em;
-    padding-bottom: 10me;
-    padding-left: 0;
-    padding-right: 0;
-    background-image: url(".images/greatest-90-fasjion-trends.webp");
+nav a:hover {
+background-color: white;
+color: purple;
+border: 2px solid purple;
+}
+
+.hero{
+    background-image: url("../images/greatest-90s-fashion-trends.webp");
+    width:100%;
+    padding: 10em 0 10em 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     background-position: top center;
 }
 
-hero > h1 { fix here
+h1 {
     width: 75%;
-    padding: .5em;
-    center content margin;
+    padding:.5em;
+    margin: 0 auto;
     color: white;
-    align text in color-interpolation-filters
+    text-align: center;
     font-size: 2rem;
-    text shadow offset and blur rgba(0,0,0,.8)
+    text-shadow: 2px 2px rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.25);
 }
 
 .trends {
     background-color: purple;
 }
 
-.trends > figure { fix here
+.trends figure{
     width: 22%;
-    appropriate display property initial-value
-    align figures oi centered withing parent container
+    display: inline-block;
+    align-items: center;
 }
 
-figure > caption { fix here
-color: white;
-font-style: italic;
-}
-
-.icon { fix here
-    Apply an appropriate display property value so that you are able to add padding
-Add padding to the top and bottom with the value of 2em and set the left and right value to 0
-}
-
-.icon > images { fix here
-    width: 260px;
-    element float to left
-    space to right in image with margin 2em
-}
-
-icon jenifer aniston + p { fix here
-    clear left flaot so that things display and not overlap
-}
-
-.featured-articles { fix here
-    Set it to not display on the page at all
-}
-
-footer { fix here
-    background-color: black;
+figcaption {
     color: white;
+    font-style: italic;
 }
 
-footer > p { fix here
-    Make sure it is contained using the class of wrapper
-Ajust alignment to be centered
-Add padding to the top and bottom with the value of 8px and set the left and right value to 0
+.icon {
+display: inline-block;
+padding: 2em 0 2em 0;
 }
+
+.icon > img {
+    width: 260px;
+    float: left;
+    margin: 2em;
+}
+
+.icon + p {
+   float: none;
+}
+
+.featured-articles {
+    display: none;
+}
+
+footer {
+background-color: black;
+color: white;
+}
+
+footer > p {
+text-align: center;
+padding: 8px 0 8px 0;
+}
+
